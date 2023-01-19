@@ -1,0 +1,28 @@
+{
+  "name": "noderest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format": "prettier --write *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheeseZyDev1/NodeREST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CheeseZyDev1/NodeREST/issues"
+  },
+  "homepage": "https://github.com/CheeseZyDev1/NodeREST#readme",
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
