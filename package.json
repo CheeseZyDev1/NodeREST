@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "format": "prettier --write *.js"
+    "start": "node src/CRUDBookNoDB.js",
+    "format": "prettier --write *.js",
+    "dev": "nodemon src/CRUDBookNoDB.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
