@@ -48,7 +48,7 @@ app.post('/books',(req,res)=>{
     });
 });
 
-app.post('/books',(req,res)=>{
+app.put('/books/:id',(req,res)=>{
     const book =req.body;
     db.run('UPDATE books SET title = ?, author = ? WHERE id = ?',book.title, book,author, req.params.id, function(err) {
         if (err) {
@@ -56,5 +56,19 @@ app.post('/books',(req,res)=>{
         } else {
             res.send(book);
         }
-    }
-        
+    });
+});        
+
+app.put('/books/:id',(req,res)=>{
+    
+    db.run('DELETE FROM books WHERE id = ?', req.params.id, function(err) {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.send(book);
+        }
+    });
+});        
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
